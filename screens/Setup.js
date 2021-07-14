@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 export default function Setup({ navigation }) {
-  const [category, setCategory] = useState();
+  const [category, setCategory] = useState("tangibles");
 
   return (
     <View style={styles.container}>
@@ -12,12 +12,12 @@ export default function Setup({ navigation }) {
         onValueChange={(val, idx) => setCategory(val)}
         style={styles.picker}
       >
-        <Picker.Item label="Food" value="food" />
-        <Picker.Item label="Toys" value="toys" />
+        <Picker.Item label="Tangibles" value="tangibles" />
+        <Picker.Item label="Edibles" value="edibles" />
       </Picker>
       <Button
         title="Add Items"
-        onPress={() => navigation.navigate('Items')}
+        onPress={() => navigation.navigate('Items', {category})}
       />
     </View>
   )
