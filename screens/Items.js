@@ -70,6 +70,7 @@ export default function Items({ route, navigation }) {
       <View style={styles.submit}>
         <Button
           title="Submit"
+          onPress={() => navigation.navigate('trial', {list})}
         />
       </View>
     </View>

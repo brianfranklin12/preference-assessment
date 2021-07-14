@@ -6,7 +6,7 @@ export default function Setup({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text>Select your category</Text>
+      <Text style={styles.text}>Select your category</Text>
       <Picker
         selectedValue={category}
         onValueChange={(val, idx) => setCategory(val)}
@@ -31,5 +31,9 @@ const styles = StyleSheet.create({
   },
   picker: {
     width: '100%',
+    marginVertical: 32,
+  },
+  text: {
+    fontSize: 18
   }
 })

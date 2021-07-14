@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, Button } from 'react-native';
 export default function Welcome({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Welcome to Preference Assessment</Text>
+      <Text style={styles.text}>Welcome to Preference Assessment</Text>
       <Button 
         title="Click here to get started"
         onPress={() => navigation.navigate('Setup')}
@@ -18,5 +18,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  text: {
+    marginBottom: 20,
+    fontSize: 18
   }
 })
